@@ -1,0 +1,10 @@
+node_modules/
+.tmp-test/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

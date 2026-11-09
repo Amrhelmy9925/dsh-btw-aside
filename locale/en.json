@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "title": "BTW side question",
+    "description": "Ask a quick aside question in the right sidebar without touching the main conversation."
+  },
+  "tab.title": "BTW",
+  "tab.description": "Ask a quick aside question.",
+  "open.label": "Ask a side question (BTW)",
+  "empty.title": "Ask a side question",
+  "empty.body": "Answers stay in this panel. The main conversation is not sent, changed, or interrupted.",
+  "placeholder": "Type a question…",
+  "send": "Send",
+  "clear": "Clear",
+  "stop": "Stop",
+  "you": "You",
+  "aside": "BTW",
+  "thinking": "Thinking…",
+  "error": "The side question failed.",
+  "retry": "Retry",
+  "hint": "Enter to send · Shift+Enter for a new line"
+}

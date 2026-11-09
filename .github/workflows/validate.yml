@@ -1,0 +1,35 @@
+name: validate
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Syntax-check the bundle
+        run: |
+          node --check index.js
+          node --check client.js
+          node --check scripts/build-market-index.mjs
+          node --check scripts/validate-index.mjs
+      - name: Validate manifest and locale JSON
+        run: |
+          for file in package.json locale/*.json; do
+            node -e "JSON.parse(require('node:fs').readFileSync('$file', 'utf8'))"
+          done
+      - name: Build the plugin market index
+        run: node scripts/build-market-index.mjs --out "$RUNNER_TEMP/index.json"
+      - name: Validate the generated index
+        run: node scripts/validate-index.mjs "$RUNNER_TEMP/index.json"

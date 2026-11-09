@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "title": "BTW 侧边提问",
+    "description": "在右侧栏提一个附带问题，不影响主对话。"
+  },
+  "tab.title": "BTW",
+  "tab.description": "快速提一个附带问题。",
+  "open.label": "提一个附带问题（BTW）",
+  "empty.title": "提一个附带问题",
+  "empty.body": "回答只留在这个面板里。主对话不会被发送、修改或中断。",
+  "placeholder": "输入问题…",
+  "send": "发送",
+  "clear": "清空",
+  "stop": "停止",
+  "you": "你",
+  "aside": "BTW",
+  "thinking": "正在思考…",
+  "error": "附带提问失败。",
+  "retry": "重试",
+  "hint": "Enter 发送 · Shift+Enter 换行"
+}
